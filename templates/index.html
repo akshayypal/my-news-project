@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Search</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* Main Container Styles */
+        .container {
+            max-width: 600px;
+            width: 90%;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: slideInUp 1.2s ease-out;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        /* Form Styles */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-size: 1rem;
+        }
+
+        input[type="text"] {
+            padding: 12px 15px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            outline: none;
+        }
+
+        input[type="text"]::placeholder {
+            color: #ddd;
+        }
+
+        button {
+            padding: 12px 15px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #ff758c, #ff7eb3);
+            color: #fff;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+        }
+
+        /* Footer Styles */
+        footer {
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>News Search</h1>
+    </header>
+    <div class="container">
+        <h2>Discover the Latest News</h2>
+        <form action="/search" method="post">
+            <label for="keyword">Enter a keyword or topic:</label>
+            <input type="text" id="keyword" name="keyword" placeholder="e.g., technology, sports" required>
+            <button type="submit">Search News</button>
+        </form>
+    </div>
+    <footer>
+        <p>Developed by: Akshay Pal and Arbaz</p>
+        <p>&copy; 2024 News Search. All rights reserved.</p>
+    </footer>
+</body>
+</html>
